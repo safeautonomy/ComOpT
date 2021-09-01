@@ -1,0 +1,137 @@
+{
+  "simulator": "SVL",
+  "simulator_config": {
+    "addr": "127.0.0.1",
+    "port": 8181
+  },
+  "map_name": "SanFrancisco",
+  "weather": {
+    "rain": 0.04462706700324126,
+    "fog": 0.12540922702481963,
+    "wetness": 0.17565685442058257,
+    "cloudiness": 0.9510315407562766,
+    "damage": 0.1810085275013425
+  },
+  "time_of_day": 12,
+  "agents": [
+    {
+      "id": "aut",
+      "agent_type": "EGO",
+      "model_name": "Lincoln2017MKZ",
+      "init_state": {
+        "position": {
+          "x": -150.94889382863363,
+          "y": 411.22625634895184
+        },
+        "heading": 2.5377054041733396,
+        "velocity": {
+          "x": -1.0297701517257902,
+          "y": 0.7103959022843024
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "apollo_controller",
+        "parameters": {
+          "destination": {
+            "x": -307.07359174820164,
+            "y": 406.73830972291546
+          },
+          "address": "localhost",
+          "dreamview_port": 8888,
+          "bridge_port": 9090,
+          "enable_modules": [
+            "Localization",
+            "Transform",
+            "Routing",
+            "Prediction",
+            "Planning",
+            "Control"
+          ]
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "npc0",
+      "agent_type": "NPC",
+      "model_name": "SchoolBus",
+      "init_state": {
+        "position": {
+          "x": -205.79017691178564,
+          "y": 539.6731081147383
+        },
+        "heading": 4.079023191242074,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 7.666755175410097
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.22142658169994323,
+          "G": 0.10297993187911914,
+          "B": 0.8323792146028138
+        }
+      }
+    },
+    {
+      "id": "npc2",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": -197.43428115048772,
+          "y": 443.2946054016026
+        },
+        "heading": 2.5377054041733396,
+        "velocity": {
+          "x": -0.0,
+          "y": 0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 0
+        }
+      },
+      "config": {}
+    }
+  ],
+  "static_items": [],
+  "traffic_lights_control": [
+    {
+      "traffic_light": "signal_117",
+      "init_color": "GREEN",
+      "trigger_distance": 54.22380209988968,
+      "yellow_light_time": 3
+    },
+    {
+      "traffic_light": "signal_116",
+      "init_color": "RED",
+      "trigger_distance": 50.59372287322034,
+      "yellow_light_time": 3
+    }
+  ],
+  "record_traffic_lights": [
+    "signal_117"
+  ],
+  "duration": 120,
+  "time_step": 0.5,
+  "aut_id": "aut"
+}

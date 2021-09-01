@@ -1,0 +1,346 @@
+{
+  "simulator": "SVL",
+  "simulator_config": {
+    "addr": "127.0.0.1",
+    "port": 8181
+  },
+  "map_name": "SanFrancisco",
+  "weather": {
+    "rain": 0.7845838348640064,
+    "fog": 0.9193280815292797,
+    "wetness": 0.9867481936894126,
+    "cloudiness": 0.6628812821431199,
+    "damage": 0.7558928783359002
+  },
+  "time_of_day": 12,
+  "agents": [
+    {
+      "id": "aut",
+      "agent_type": "EGO",
+      "model_name": "Lincoln2017MKZ",
+      "init_state": {
+        "position": {
+          "x": -350.9436249973885,
+          "y": 8.459232889207126
+        },
+        "heading": 3.13469332141157,
+        "velocity": {
+          "x": -9.272262922265261,
+          "y": 0.06397343700967016
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "apollo_controller",
+        "parameters": {
+          "destination": {
+            "x": -584.4420515873902,
+            "y": -167.65398997001256
+          },
+          "address": "localhost",
+          "dreamview_port": 8888,
+          "bridge_port": 9090,
+          "enable_modules": [
+            "Localization",
+            "Transform",
+            "Routing",
+            "Prediction",
+            "Planning",
+            "Control"
+          ]
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "npc0",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": -588.5407856792522,
+          "y": 152.29702109343205
+        },
+        "heading": 4.713325160426031,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 10.949319029396843
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.2746750756526628,
+          "G": 0.8380760967441508,
+          "B": 0.854519651775315
+        }
+      }
+    },
+    {
+      "id": "npc1",
+      "agent_type": "NPC",
+      "model_name": "Hatchback",
+      "init_state": {
+        "position": {
+          "x": -410.9427930105689,
+          "y": 8.700336261382809
+        },
+        "heading": 3.1415956316978595,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 13.923912824680084
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.5695032247353241,
+          "G": 0.2258213440857736,
+          "B": 0.027083966187230635
+        }
+      }
+    },
+    {
+      "id": "npc2",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": -410.79937744178926,
+          "y": 0.4002895398559413
+        },
+        "heading": 2.223670683144777e-06,
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 13.987214393499887
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.24404336062486343,
+          "G": 0.9828250674681194,
+          "B": 0.7486657062134606
+        }
+      }
+    },
+    {
+      "id": "npc3",
+      "agent_type": "NPC",
+      "model_name": "SUV",
+      "init_state": {
+        "position": {
+          "x": -396.0824279781772,
+          "y": 4.3002589748440325
+        },
+        "heading": 3.1415955640120283,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 9.754040063320293
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.9182519066644697,
+          "G": 0.03429848628421961,
+          "B": 0.31501565399726494
+        }
+      }
+    },
+    {
+      "id": "npc4",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": -576.2653809927792,
+          "y": 62.36446868071804
+        },
+        "heading": 4.710867551789661,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 10.73081653474295
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.8037069477065472,
+          "G": 0.6451205779098163,
+          "B": 0.9977460198817966
+        }
+      }
+    },
+    {
+      "id": "npc5",
+      "agent_type": "NPC",
+      "model_name": "SchoolBus",
+      "init_state": {
+        "position": {
+          "x": -584.5979367834395,
+          "y": 152.27072148746828
+        },
+        "heading": 4.715152056837935,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 9.513398954487553
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.4360485924533183,
+          "G": 0.30333034217830723,
+          "B": 0.5245070287041433
+        }
+      }
+    },
+    {
+      "id": "npc6",
+      "agent_type": "NPC",
+      "model_name": "Jeep",
+      "init_state": {
+        "position": {
+          "x": -588.554828377821,
+          "y": 167.2970145201845
+        },
+        "heading": 4.713325160426031,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 14.641414628524062
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.5876078633403115,
+          "G": 0.5836301438881496,
+          "B": 0.05715244569812006
+        }
+      }
+    },
+    {
+      "id": "npc7",
+      "agent_type": "NPC",
+      "model_name": "SUV",
+      "init_state": {
+        "position": {
+          "x": -351.7483520516604,
+          "y": -3.6995508292716783
+        },
+        "heading": 1.4602377686854474e-06,
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 9.540553628868581
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.6392189680712473,
+          "G": 0.1797733702131601,
+          "B": 0.28984988919947585
+        }
+      }
+    },
+    {
+      "id": "npc9",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": -405.5270081666202,
+          "y": 8.700352390329847
+        },
+        "heading": 3.1415956316978595,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 0
+        }
+      },
+      "config": {}
+    }
+  ],
+  "static_items": [],
+  "traffic_lights_control": [],
+  "record_traffic_lights": [],
+  "duration": 120,
+  "time_step": 0.5,
+  "aut_id": "aut"
+}

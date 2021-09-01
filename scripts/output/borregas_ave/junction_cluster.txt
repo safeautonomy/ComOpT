@@ -1,0 +1,8 @@
+{'{(1,1),(1,1),(1,1),(1,1),}': [[J_1]],
+'{(0,2),(0,3),(0,3),(1,0),(1,0),(1,1),(4,0),(4,0),}': [[J_0]],
+'{(0,4),(4,0),}': [[road_0_section_1, road_3_section_1]],
+'{(0,3),(3,0),}': [[road_1_section_1, road_2_section_1]],
+'{(0,2),(2,0),}': [[road_4_section_1, road_5_section_1]],
+'{(1,1),(1,1),}': [[road_6_section_1, road_7_section_1, road_8_section_1, road_9_section_1, road_12_section_1]],
+'{(1,2),(2,1),}': [[road_10_section_1]],
+'{(0,1),(1,0),}': [[road_11_section_1]]}

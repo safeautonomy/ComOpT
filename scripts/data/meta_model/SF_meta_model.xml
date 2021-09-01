@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<discrete-scenario-description>
+  <weather>cloudy, rainy, sunny</weather>
+  <road_damage>light, medium, heavy</road_damage>
+  <total_lanes>1, 2, 4</total_lanes>
+  <!-- <current_lane>1, 2</current_lane> -->
+  <road_structure>straight_lane, 4_way_intersection, Y_way_intersection, T_way_intersection, roundabout</road_structure>
+  <entrance_crosswalk>True, False</entrance_crosswalk>
+  <exit_crosswalk>True, False</exit_crosswalk>
+  <!-- <traffic_light_control>True, False</traffic_light_control> -->
+  <has_traffic_light>True, False</has_traffic_light>
+  <traffic_light_trigger_distance>none, far, medium, close</traffic_light_trigger_distance>
+  <traffic_light_initial_color>none, red, green</traffic_light_initial_color>
+  <density_of_vehicles>dense, mild, clear</density_of_vehicles>
+  <density_of_crossing_pedestrians>dense, mild, clear</density_of_crossing_pedestrians>  
+  <ego_vehicle_movement_pattern>break, drive_straight, cut_left, cut_right, turn_left, turn_right, make_u_turn </ego_vehicle_movement_pattern>  
+  <ego_vehicle_initial_speed>stop, low, mid, high</ego_vehicle_initial_speed>  
+  <!-- <front_vehicle>True, False</front_vehicle>
+  <oncoming_vehicle>True, False</oncoming_vehicle> -->
+</discrete-scenario-description>
+

@@ -1,0 +1,274 @@
+{
+    "EgoModels": {
+        "Lincoln2017MKZ": {
+            
+            "apollo_config": {
+                "mode": "Mkz Lgsvl",
+                "vehicle": "Lincoln2017MKZ LGSVL",
+                "edge": {
+                    "front_edge_to_center": 3.89,
+                    "back_edge_to_center": 1.043,
+                    "left_edge_to_center": 1.055,
+                    "right_edge_to_center": 1.055
+                }
+            },
+            
+            "svl_config": {
+                "model_name": "Lincoln2017MKZ",
+                "size": {
+                    "width": 2.13156199455262,
+                    "length": 5.0207457542419505,
+                    "height": 1.4982306361198472
+                },
+                "default_config": {
+                    "mode": "Apollo 6.0 (modular testing)", 
+                    "id": "2e9095fa-c9b9-4f3f-8d7d-65fa2bb03921"
+                },
+                "configs": [
+                    {
+                        "mode": "Apollo 5.0 (modular testing)",
+                        "id": "5c7fb3b0-1fd4-4943-8347-f73a05749718"
+                    },
+                    {
+                        "mode": "Keybaord Control",
+                        "id": "511086bd-97ad-4109-b0ad-654ba662fbcf"
+                    },
+                    {
+                        "mode": "Apollo 5.0",
+                        "id": "47b529db-0593-4908-b3e7-4b24a32a0f70"
+                    },
+                    {
+                        "mode": "Apollo 6.0 (modular testing)", 
+                        "id": "2e9095fa-c9b9-4f3f-8d7d-65fa2bb03921"
+                    },
+                    {
+                        "mode": "Apollo 5.0 (full analysis)",
+                        "id": "22656c7b-104b-4e6a-9c70-9955b6582220"
+                    }
+                ]
+            }
+        }
+    },
+    "NPCModels": {
+        "Sedan": {
+            "svl_config": {
+                "model_name": "Sedan",
+                "default_config": {
+                    "color": {
+                        "R": 1,
+                        "G": 1,
+                        "B": 1       
+                    }
+                },
+                "size": {
+                    "width": 2.09093856811524,
+                    "length": 4.56651687622071,
+                    "height": 1.3560072183609
+                }
+            }
+        },
+
+        "BoxTruck": {
+            "svl_config": {
+                "model_name": "BoxTruck",
+                "default_config": {
+                    "color": {
+                        "R": 1,
+                        "G": 1,
+                        "B": 1       
+                    }
+                },
+                "size": {
+                    "width": 3.20994186401368,
+                    "length": 10.51540470123292,
+                    "height": 4.44158983230591
+                }
+            }
+        },
+
+        "Hatchback": {
+            "svl_config": {
+                "model_name": "Hatchback",
+                "default_config": {
+                    "color": {
+                        "R": 1,
+                        "G": 1,
+                        "B": 1       
+                    }
+                },
+                "size": {
+                    "width": 1.894415378570556,
+                    "length": 4.06140279769898,
+                    "height": 1.43958854675293
+                }
+            }
+        },
+        "Jeep": {
+            "svl_config": {
+                "model_name": "Jeep",
+                "default_config": {
+                    "color": {
+                        "R": 1,
+                        "G": 1,
+                        "B": 1       
+                    }
+                },
+                "size": {
+                    "width": 1.8471839427948,
+                    "length": 3.9509117603301998,
+                    "height": 1.6631338596344
+                }
+            }
+        },
+        "SUV": {
+            "svl_config": {
+                "model_name": "SUV",
+                "default_config": {
+                    "color": {
+                        "R": 1,
+                        "G": 1,
+                        "B": 1       
+                    }
+                },
+                "size": {
+                    "width": 2.08093047142028,
+                    "length": 4.70555877685546,
+                    "height": 1.77153027057648
+                }
+            }
+        },
+        "SchoolBus": {
+            "svl_config": {
+                "model_name": "SchoolBus",
+                "default_config": {
+                    "color": {
+                        "R": 1,
+                        "G": 1,
+                        "B": 1       
+                    }
+                },
+                "size": {
+                    "width": 3.2562770843505797,
+                    "length": 9.21063709259033,
+                    "height": 3.248221874237061
+                }
+                
+            }
+        }
+
+    },
+    "PedestrianModels": {
+        "Bob": {
+            "svl_config":{
+                "model_name": "Bob",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "EntrepreneurFemale": {
+            "svl_config":{
+                "model_name": "EntrepreneurFemale",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "Howard": {
+            "svl_config":{
+                "model_name": "Howard",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "Johny": {
+            "svl_config":{
+                "model_name": "Johny",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "Pamela": {
+            "svl_config":{
+                "model_name": "Pamela",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "Presley": {
+            "svl_config":{
+                "model_name": "Presley",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "Robin": {
+            "svl_config":{
+                "model_name": "Robin",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "Stephen": {
+            "svl_config":{
+                "model_name": "Stephen",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        },
+        "Zoe": {
+            "svl_config":{
+                "model_name": "Zoe",
+                "size": {
+                    "width": 0.4,
+                    "length": 0.4,
+                    "height": 1.7
+                },
+                "default_config": {}
+            }
+        }
+    },
+    "ConeModels": {
+        "TrafficCone": {
+            "svl_config": {
+                "model_name": "TrafficCone",
+                "default_config": {},
+                "size": {
+                    "width": 0.3,
+                    "length": 0.3,
+                    "height": 1
+                }
+            }
+        }
+    }
+}

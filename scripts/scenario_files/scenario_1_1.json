@@ -1,0 +1,352 @@
+{
+  "simulator": "SVL",
+  "simulator_config": {
+    "addr": "127.0.0.1",
+    "port": 8181
+  },
+  "map_name": "SanFrancisco",
+  "weather": {
+    "rain": 0.5154745966145405,
+    "fog": 0.44892980945792826,
+    "wetness": 0.6286263335078378,
+    "cloudiness": 0.6910802129312417,
+    "damage": 0.9185228096393598
+  },
+  "time_of_day": 12,
+  "agents": [
+    {
+      "id": "aut",
+      "agent_type": "EGO",
+      "model_name": "Lincoln2017MKZ",
+      "init_state": {
+        "position": {
+          "x": -350.9436249973885,
+          "y": 8.459232889207126
+        },
+        "heading": 3.13469332141157,
+        "velocity": {
+          "x": -6.920252850586337,
+          "y": 0.04774588075634707
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "apollo_controller",
+        "parameters": {
+          "destination": {
+            "x": -580.5213281397719,
+            "y": -167.78583976578753
+          },
+          "address": "localhost",
+          "dreamview_port": 8888,
+          "bridge_port": 9090,
+          "enable_modules": [
+            "Localization",
+            "Transform",
+            "Routing",
+            "Prediction",
+            "Planning",
+            "Control"
+          ]
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "npc0",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": -546.0824279776596,
+          "y": 4.299867498642343
+        },
+        "heading": 3.1415949602876205,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 6.0193031085664845
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.07037771849499919,
+          "G": 0.12106772809630917,
+          "B": 0.7050037026297908
+        }
+      }
+    },
+    {
+      "id": "npc1",
+      "agent_type": "NPC",
+      "model_name": "BoxTruck",
+      "init_state": {
+        "position": {
+          "x": -588.554828377821,
+          "y": 167.2970145201845
+        },
+        "heading": 4.713325160426031,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 13.356435586434666
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.7945017929621382,
+          "G": 0.9890814943248885,
+          "B": 0.8617257712032125
+        }
+      }
+    },
+    {
+      "id": "npc2",
+      "agent_type": "NPC",
+      "model_name": "SUV",
+      "init_state": {
+        "position": {
+          "x": -515.9426631016235,
+          "y": 8.592578337036922
+        },
+        "heading": 3.1440078084616427,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 8.731528084126158
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.4379151711678686,
+          "G": 0.25529363603541333,
+          "B": 0.5418401194759811
+        }
+      }
+    },
+    {
+      "id": "npc3",
+      "agent_type": "NPC",
+      "model_name": "Jeep",
+      "init_state": {
+        "position": {
+          "x": -455.79937744167796,
+          "y": 0.40018947489700424
+        },
+        "heading": 2.223670683144777e-06,
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 13.32775978414533
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.34590555946747037,
+          "G": 0.5448000631386705,
+          "B": 0.8840662112333023
+        }
+      }
+    },
+    {
+      "id": "npc4",
+      "agent_type": "NPC",
+      "model_name": "BoxTruck",
+      "init_state": {
+        "position": {
+          "x": -545.7993774414555,
+          "y": 0.39998934497913013
+        },
+        "heading": 2.223670683144777e-06,
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 6.473068026481679
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.4529511299412208,
+          "G": 0.9812113037976823,
+          "B": 0.7183568534963037
+        }
+      }
+    },
+    {
+      "id": "npc5",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": -396.7483520515734,
+          "y": -3.6996338201447156
+        },
+        "heading": 3.053247565000217e-06,
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 11.672990527892791
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.04574032500759151,
+          "G": 0.7468682322626438,
+          "B": 0.6615404038523875
+        }
+      }
+    },
+    {
+      "id": "npc6",
+      "agent_type": "NPC",
+      "model_name": "Hatchback",
+      "init_state": {
+        "position": {
+          "x": -531.0824279776995,
+          "y": 4.299902098992504
+        },
+        "heading": 3.1415949602876205,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 9.690142403833399
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.622039116703984,
+          "G": 0.003287900440092306,
+          "B": 0.878893493246183
+        }
+      }
+    },
+    {
+      "id": "npc7",
+      "agent_type": "NPC",
+      "model_name": "SchoolBus",
+      "init_state": {
+        "position": {
+          "x": -410.9427930105689,
+          "y": 8.700336261382809
+        },
+        "heading": 3.1415956316978595,
+        "velocity": {
+          "x": -0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 9.044201879763893
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.4953004535803578,
+          "G": 0.5367841814069435,
+          "B": 0.17026895913656015
+        }
+      }
+    },
+    {
+      "id": "npc8",
+      "agent_type": "NPC",
+      "model_name": "SUV",
+      "init_state": {
+        "position": {
+          "x": -588.4173366366178,
+          "y": 32.2970848864457
+        },
+        "heading": 4.713470729819383,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 5.193337347044404
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.03543540329321915,
+          "G": 0.01393068476803827,
+          "B": 0.2098527295186644
+        }
+      }
+    }
+  ],
+  "static_items": [],
+  "traffic_lights_control": [],
+  "record_traffic_lights": [],
+  "duration": 120,
+  "time_step": 0.1,
+  "aut_id": "aut"
+}

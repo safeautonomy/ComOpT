@@ -1,0 +1,17 @@
+{
+    "BorregasAve": {
+        "folder": "data/map/borregas_ave/",
+        "apollo_name": "Borregas Ave",
+        "svl_name": "BorregasAve"
+    },
+    "SanFrancisco": {
+        "folder": "data/map/san_francisco/",
+        "apollo_name": "San Francisco",
+        "svl_name": "SanFrancisco"
+    },
+    "GoMentum": {
+        "folder": "data/map2021/GoMentum",
+        "apollo_name": "Gomentum",
+        "svl_name": "GoMentum"
+    }
+}

@@ -1,0 +1,957 @@
+{
+    "j_crossroads": [
+        {
+            "id": "J_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [
+                {
+                    "from": "lane_20",
+                    "self": "lane_59",
+                    "to": "lane_22"
+                },
+                {
+                    "from": "lane_28",
+                    "self": "lane_58",
+                    "to": "lane_24"
+                },
+                {
+                    "from": "lane_25",
+                    "self": "lane_57",
+                    "to": "lane_21"
+                },
+                {
+                    "from": "lane_23",
+                    "self": "lane_56",
+                    "to": "lane_27"
+                },
+                {
+                    "from": "lane_20",
+                    "self": "lane_55",
+                    "to": "lane_27"
+                },
+                {
+                    "from": "lane_28",
+                    "self": "lane_54",
+                    "to": "lane_21"
+                },
+                {
+                    "from": "lane_23",
+                    "self": "lane_53",
+                    "to": "lane_24"
+                },
+                {
+                    "from": "lane_25",
+                    "self": "lane_52",
+                    "to": "lane_22"
+                },
+                {
+                    "from": "lane_23",
+                    "self": "lane_51",
+                    "to": "lane_21"
+                },
+                {
+                    "from": "lane_20",
+                    "self": "lane_50",
+                    "to": "lane_24"
+                },
+                {
+                    "from": "lane_25",
+                    "self": "lane_49",
+                    "to": "lane_27"
+                },
+                {
+                    "from": null,
+                    "self": "lane_48",
+                    "to": "lane_22"
+                }
+            ],
+            "case_0": {
+                "self": {
+                    "entrance": [
+                        "lane_20"
+                    ],
+                    "exit": [
+                        "lane_21"
+                    ]
+                },
+                "right": {
+                    "entrance": [
+                        "lane_25"
+                    ],
+                    "exit": [
+                        "lane_24"
+                    ]
+                },
+                "forward": {
+                    "entrance": [
+                        "lane_28"
+                    ],
+                    "exit": [
+                        "lane_27"
+                    ]
+                },
+                "left": {
+                    "entrance": [
+                        "lane_23"
+                    ],
+                    "exit": [
+                        "lane_22"
+                    ]
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_25"
+                    ],
+                    "exit": [
+                        "lane_24"
+                    ]
+                },
+                "right": {
+                    "entrance": [
+                        "lane_28"
+                    ],
+                    "exit": [
+                        "lane_27"
+                    ]
+                },
+                "forward": {
+                    "entrance": [
+                        "lane_23"
+                    ],
+                    "exit": [
+                        "lane_22"
+                    ]
+                },
+                "left": {
+                    "entrance": [
+                        "lane_20"
+                    ],
+                    "exit": [
+                        "lane_21"
+                    ]
+                }
+            },
+            "case_2": {
+                "self": {
+                    "entrance": [
+                        "lane_28"
+                    ],
+                    "exit": [
+                        "lane_27"
+                    ]
+                },
+                "right": {
+                    "entrance": [
+                        "lane_23"
+                    ],
+                    "exit": [
+                        "lane_22"
+                    ]
+                },
+                "forward": {
+                    "entrance": [
+                        "lane_20"
+                    ],
+                    "exit": [
+                        "lane_21"
+                    ]
+                },
+                "left": {
+                    "entrance": [
+                        "lane_25"
+                    ],
+                    "exit": [
+                        "lane_24"
+                    ]
+                }
+            },
+            "case_3": {
+                "self": {
+                    "entrance": [
+                        "lane_23"
+                    ],
+                    "exit": [
+                        "lane_22"
+                    ]
+                },
+                "right": {
+                    "entrance": [
+                        "lane_20"
+                    ],
+                    "exit": [
+                        "lane_21"
+                    ]
+                },
+                "forward": {
+                    "entrance": [
+                        "lane_25"
+                    ],
+                    "exit": [
+                        "lane_24"
+                    ]
+                },
+                "left": {
+                    "entrance": [
+                        "lane_28"
+                    ],
+                    "exit": [
+                        "lane_27"
+                    ]
+                }
+            }
+        }
+    ],
+    "junction_class": [
+        {
+            "id": "J_0",
+            "crosswalks": [
+                {
+                    "id": "CW_5",
+                    "lanes": [
+                        "lane_34",
+                        "lane_32",
+                        "lane_35",
+                        "lane_46",
+                        "lane_33"
+                    ],
+                    "polygon": [
+                        "(587059.6231517792, 4141574.7890439034, 0.0)",
+                        "(587063.1022891998, 4141575.34305954, 0.0)",
+                        "(587068.8869194984, 4141595.0209846497, 0.0)",
+                        "(587066.7563891411, 4141598.7463531494, 0.0)"
+                    ]
+                },
+                {
+                    "id": "CW_1",
+                    "lanes": [
+                        "lane_34",
+                        "lane_41",
+                        "lane_35",
+                        "lane_43",
+                        "lane_33"
+                    ],
+                    "polygon": [
+                        "(587048.201839447, 4141605.9399909973, 0.0)",
+                        "(587044.4007568359, 4141602.1434936523, 0.0)",
+                        "(587039.9173908234, 4141586.2028713226, 0.0)",
+                        "(587042.7221717834, 4141585.1519184113, 0.0)"
+                    ]
+                },
+                {
+                    "id": "CW_0",
+                    "lanes": [
+                        "lane_40",
+                        "lane_42",
+                        "lane_46",
+                        "lane_15",
+                        "lane_41"
+                    ],
+                    "polygon": [
+                        "(587066.5395641327, 4141601.785633087, 0.0)",
+                        "(587066.7563896179, 4141598.7463550568, 0.0)",
+                        "(587048.2018375397, 4141605.939994812, 0.0)",
+                        "(587049.4409351349, 4141607.949493408, 0.0)"
+                    ]
+                },
+                {
+                    "id": "CW_3",
+                    "lanes": [
+                        "lane_40",
+                        "lane_32",
+                        "lane_44",
+                        "lane_45",
+                        "lane_47",
+                        "lane_43"
+                    ],
+                    "polygon": [
+                        "(587036.6784210205, 4141565.812128067, 0.0)",
+                        "(587036.7642974854, 4141562.1395874023, 0.0)",
+                        "(587055.4467058182, 4141557.356197357, 0.0)",
+                        "(587058.6587724686, 4141560.07324028, 0.0)"
+                    ]
+                },
+                {
+                    "id": "CW_4",
+                    "lanes": [
+                        "lane_42",
+                        "lane_44",
+                        "lane_38",
+                        "lane_39",
+                        "lane_37"
+                    ],
+                    "polygon": [
+                        "(587058.6587734222, 4141560.0732421875, 0.0)",
+                        "(587061.9404449463, 4141560.977333069, 0.0)",
+                        "(587063.1022891998, 4141575.34305954, 0.0)",
+                        "(587059.6231498718, 4141574.7890434265, 0.0)"
+                    ]
+                },
+                {
+                    "id": "CW_2",
+                    "lanes": [
+                        "lane_36",
+                        "lane_38",
+                        "lane_39",
+                        "lane_47",
+                        "lane_37"
+                    ],
+                    "polygon": [
+                        "(587036.6784210205, 4141565.812128067, 0.0)",
+                        "(587033.2481765747, 4141567.9801712036, 0.0)",
+                        "(587039.9173927307, 4141586.2028713226, 0.0)",
+                        "(587042.7221755981, 4141585.1519174576, 0.0)"
+                    ]
+                }
+            ],
+            "signals": [],
+            "central_lanes": [
+                {
+                    "from": "lane_10",
+                    "self": "lane_47",
+                    "to": "lane_30"
+                },
+                {
+                    "from": "lane_0",
+                    "self": "lane_46",
+                    "to": "lane_14"
+                },
+                {
+                    "from": "lane_31",
+                    "self": "lane_45",
+                    "to": "lane_15"
+                },
+                {
+                    "from": "lane_29",
+                    "self": "lane_44",
+                    "to": "lane_4"
+                },
+                {
+                    "from": "lane_31",
+                    "self": "lane_43",
+                    "to": "lane_9"
+                },
+                {
+                    "from": "lane_16",
+                    "self": "lane_42",
+                    "to": "lane_6"
+                },
+                {
+                    "from": null,
+                    "self": "lane_41",
+                    "to": "lane_7"
+                },
+                {
+                    "from": "lane_16",
+                    "self": "lane_40",
+                    "to": "lane_30"
+                },
+                {
+                    "from": "lane_12",
+                    "self": "lane_39",
+                    "to": "lane_6"
+                },
+                {
+                    "from": "lane_11",
+                    "self": "lane_38",
+                    "to": "lane_5"
+                },
+                {
+                    "from": "lane_10",
+                    "self": "lane_37",
+                    "to": "lane_4"
+                },
+                {
+                    "from": "lane_13",
+                    "self": "lane_36",
+                    "to": "lane_15"
+                },
+                {
+                    "from": "lane_0",
+                    "self": "lane_35",
+                    "to": "lane_7"
+                },
+                {
+                    "from": "lane_1",
+                    "self": "lane_34",
+                    "to": "lane_8"
+                },
+                {
+                    "from": "lane_2",
+                    "self": "lane_33",
+                    "to": "lane_9"
+                },
+                {
+                    "from": "lane_3",
+                    "self": "lane_32",
+                    "to": "lane_30"
+                }
+            ]
+        }
+    ],
+    "j_2ends_long_straight": [
+        {
+            "id": "road_0_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_3",
+                        "lane_2",
+                        "lane_1",
+                        "lane_0"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_3",
+                        "lane_2",
+                        "lane_1",
+                        "lane_0"
+                    ],
+                    "exit": []
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_3",
+                        "lane_2",
+                        "lane_1",
+                        "lane_0"
+                    ],
+                    "exit": []
+                },
+                "other": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_3",
+                        "lane_2",
+                        "lane_1",
+                        "lane_0"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_1_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_6",
+                        "lane_5",
+                        "lane_4"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_6",
+                        "lane_5",
+                        "lane_4"
+                    ],
+                    "exit": []
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_6",
+                        "lane_5",
+                        "lane_4"
+                    ],
+                    "exit": []
+                },
+                "other": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_6",
+                        "lane_5",
+                        "lane_4"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_6_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [
+                        "lane_18"
+                    ],
+                    "exit": [
+                        "lane_19"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_19"
+                    ],
+                    "exit": [
+                        "lane_18"
+                    ]
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_19"
+                    ],
+                    "exit": [
+                        "lane_18"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_18"
+                    ],
+                    "exit": [
+                        "lane_19"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_9_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [
+                        "lane_24"
+                    ],
+                    "exit": [
+                        "lane_25"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_25"
+                    ],
+                    "exit": [
+                        "lane_24"
+                    ]
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_25"
+                    ],
+                    "exit": [
+                        "lane_24"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_24"
+                    ],
+                    "exit": [
+                        "lane_25"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_10_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [
+                        "lane_27"
+                    ],
+                    "exit": [
+                        "lane_28",
+                        "lane_26"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_28",
+                        "lane_26"
+                    ],
+                    "exit": [
+                        "lane_27"
+                    ]
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_28",
+                        "lane_26"
+                    ],
+                    "exit": [
+                        "lane_27"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_27"
+                    ],
+                    "exit": [
+                        "lane_28",
+                        "lane_26"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_11_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_29"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_29"
+                    ],
+                    "exit": []
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_29"
+                    ],
+                    "exit": []
+                },
+                "other": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_29"
+                    ]
+                }
+            }
+        }
+    ],
+    "j_2ends_straight": [
+        {
+            "id": "road_2_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_9",
+                        "lane_8",
+                        "lane_7"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_9",
+                        "lane_8",
+                        "lane_7"
+                    ],
+                    "exit": []
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_9",
+                        "lane_8",
+                        "lane_7"
+                    ],
+                    "exit": []
+                },
+                "other": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_9",
+                        "lane_8",
+                        "lane_7"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_3_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_13",
+                        "lane_12",
+                        "lane_11",
+                        "lane_10"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_13",
+                        "lane_12",
+                        "lane_11",
+                        "lane_10"
+                    ],
+                    "exit": []
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_13",
+                        "lane_12",
+                        "lane_11",
+                        "lane_10"
+                    ],
+                    "exit": []
+                },
+                "other": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_13",
+                        "lane_12",
+                        "lane_11",
+                        "lane_10"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_4_section_1",
+            "crosswalks": [
+                {
+                    "id": "CW_0",
+                    "lanes": [
+                        "lane_40",
+                        "lane_42",
+                        "lane_46",
+                        "lane_15",
+                        "lane_41"
+                    ],
+                    "polygon": [
+                        "(587066.5395641327, 4141601.785633087, 0.0)",
+                        "(587066.7563896179, 4141598.7463550568, 0.0)",
+                        "(587048.2018375397, 4141605.939994812, 0.0)",
+                        "(587049.4409351349, 4141607.949493408, 0.0)"
+                    ]
+                }
+            ],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_15",
+                        "lane_14"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_15",
+                        "lane_14"
+                    ],
+                    "exit": []
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_15",
+                        "lane_14"
+                    ],
+                    "exit": []
+                },
+                "other": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_15",
+                        "lane_14"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_5_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_16",
+                        "lane_17"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_16",
+                        "lane_17"
+                    ],
+                    "exit": []
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_16",
+                        "lane_17"
+                    ],
+                    "exit": []
+                },
+                "other": {
+                    "entrance": [],
+                    "exit": [
+                        "lane_16",
+                        "lane_17"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_7_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [
+                        "lane_21"
+                    ],
+                    "exit": [
+                        "lane_20"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_20"
+                    ],
+                    "exit": [
+                        "lane_21"
+                    ]
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_20"
+                    ],
+                    "exit": [
+                        "lane_21"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_21"
+                    ],
+                    "exit": [
+                        "lane_20"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_8_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [
+                        "lane_23"
+                    ],
+                    "exit": [
+                        "lane_22"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_22"
+                    ],
+                    "exit": [
+                        "lane_23"
+                    ]
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_22"
+                    ],
+                    "exit": [
+                        "lane_23"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_23"
+                    ],
+                    "exit": [
+                        "lane_22"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "road_12_section_1",
+            "crosswalks": [],
+            "signals": [],
+            "central_lanes": [],
+            "case_0": {
+                "self": {
+                    "entrance": [
+                        "lane_30"
+                    ],
+                    "exit": [
+                        "lane_31"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_31"
+                    ],
+                    "exit": [
+                        "lane_30"
+                    ]
+                }
+            },
+            "case_1": {
+                "self": {
+                    "entrance": [
+                        "lane_31"
+                    ],
+                    "exit": [
+                        "lane_30"
+                    ]
+                },
+                "other": {
+                    "entrance": [
+                        "lane_30"
+                    ],
+                    "exit": [
+                        "lane_31"
+                    ]
+                }
+            }
+        }
+    ]
+}

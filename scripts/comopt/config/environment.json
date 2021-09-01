@@ -1,0 +1,13 @@
+{
+    "weather": {
+        "svl_config": {
+            "default": {
+                "rain": 0,
+                "fog": 0,
+                "wetness": 0,
+                "cloudiness": 0,
+                "damage": 0
+            }
+        }
+    }
+}

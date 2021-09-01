@@ -1,0 +1,131 @@
+{
+  "simulator": "SVL",
+  "simulator_config": {
+    "addr": "127.0.0.1",
+    "port": 8181
+  },
+  "map_name": "SanFrancisco",
+  "weather": {
+    "rain": 0.8084993892640207,
+    "fog": 0.5896060503507599,
+    "wetness": 0.5145090464699063,
+    "cloudiness": 0.6792935010237051,
+    "damage": 0.1954496998647325
+  },
+  "time_of_day": 12,
+  "agents": [
+    {
+      "id": "aut",
+      "agent_type": "EGO",
+      "model_name": "Lincoln2017MKZ",
+      "init_state": {
+        "position": {
+          "x": 473.56738105219836,
+          "y": 580.5441848939789
+        },
+        "heading": 5.667223222799917,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "apollo_controller",
+        "parameters": {
+          "destination": {
+            "x": 596.7601746067728,
+            "y": 395.9244105482615
+          },
+          "address": "localhost",
+          "dreamview_port": 8888,
+          "bridge_port": 9090,
+          "enable_modules": [
+            "Localization",
+            "Transform",
+            "Routing",
+            "Prediction",
+            "Planning",
+            "Control"
+          ]
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "npc1",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": 578.1564901313221,
+          "y": 506.00419150165914
+        },
+        "heading": 5.661179780185147,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 0
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "npc2",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": 507.8362332229107,
+          "y": 550.9381201770383
+        },
+        "heading": 5.666135486707479,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 5
+        }
+      },
+      "config": {}
+    }
+  ],
+  "static_items": [],
+  "traffic_lights_control": [
+    {
+      "traffic_light": "signal_104",
+      "init_color": "RED",
+      "trigger_distance": 31.415745543465583,
+      "yellow_light_time": 3
+    },
+    {
+      "traffic_light": "signal_105",
+      "init_color": "GREEN",
+      "trigger_distance": 38.68047865930951,
+      "yellow_light_time": 3
+    }
+  ],
+  "record_traffic_lights": [
+    "signal_105"
+  ],
+  "duration": 120,
+  "time_step": 0.5,
+  "aut_id": "aut"
+}

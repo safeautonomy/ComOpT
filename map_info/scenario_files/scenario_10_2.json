@@ -1,0 +1,246 @@
+{
+  "simulator": "SVL",
+  "simulator_config": {
+    "addr": "127.0.0.1",
+    "port": 8181
+  },
+  "map_name": "SanFrancisco",
+  "weather": {
+    "rain": 0.06737507032393056,
+    "fog": 0.08889236672352416,
+    "wetness": 0.09431669484404515,
+    "cloudiness": 0.3210463369564427,
+    "damage": 0.18670762905516308
+  },
+  "time_of_day": 12,
+  "agents": [
+    {
+      "id": "aut",
+      "agent_type": "EGO",
+      "model_name": "Lincoln2017MKZ",
+      "init_state": {
+        "position": {
+          "x": 242.31815490734985,
+          "y": 164.21159913920306
+        },
+        "heading": 4.717548305056056,
+        "velocity": {
+          "x": 0.021849739921074775,
+          "y": -4.234962411251018
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "apollo_controller",
+        "parameters": {
+          "destination": {
+            "x": 237.6896870469423,
+            "y": 21.255620573608567
+          },
+          "address": "localhost",
+          "dreamview_port": 8888,
+          "bridge_port": 9090,
+          "enable_modules": [
+            "Localization",
+            "Transform",
+            "Routing",
+            "Prediction",
+            "Planning",
+            "Control"
+          ]
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "npc0",
+      "agent_type": "NPC",
+      "model_name": "Jeep",
+      "init_state": {
+        "position": {
+          "x": 234.36739507325467,
+          "y": 164.17853554616818
+        },
+        "heading": 4.714145583829605,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 12.469460691704484
+        }
+      },
+      "config": {
+        "color": {
+          "R": 0.7321010908153652,
+          "G": 0.2997628820400787,
+          "B": 0.06788986416185405
+        }
+      }
+    },
+    {
+      "id": "ped0",
+      "agent_type": "PEDESTRIAN",
+      "model_name": "Howard",
+      "init_state": {
+        "position": {
+          "x": 248.26187285775273,
+          "y": 170.09066504250367
+        },
+        "heading": 0.0,
+        "velocity": {
+          "x": 0,
+          "y": 0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "single_destination_controller",
+        "parameters": {
+          "destination": {
+            "x": 232.24478069980174,
+            "y": 171.8308697945833
+          },
+          "speed": 1.7500278308303296,
+          "trigger_distance": 17.858396175259603
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "ped1",
+      "agent_type": "PEDESTRIAN",
+      "model_name": "Stephen",
+      "init_state": {
+        "position": {
+          "x": 232.02079365894798,
+          "y": 176.57584040358023
+        },
+        "heading": 0.0,
+        "velocity": {
+          "x": 0,
+          "y": 0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "single_destination_controller",
+        "parameters": {
+          "destination": {
+            "x": 248.21991232511428,
+            "y": 171.20923762155462
+          },
+          "speed": 1.2255281063202448,
+          "trigger_distance": 30.109699672897293
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "ped2",
+      "agent_type": "PEDESTRIAN",
+      "model_name": "Howard",
+      "init_state": {
+        "position": {
+          "x": 232.25495482971812,
+          "y": 171.61533970301454
+        },
+        "heading": 0.0,
+        "velocity": {
+          "x": 0,
+          "y": 0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "single_destination_controller",
+        "parameters": {
+          "destination": {
+            "x": 248.25214633354267,
+            "y": 170.34995210553038
+          },
+          "speed": 1.3317128799736089,
+          "trigger_distance": 37.81834850346503
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "ped3",
+      "agent_type": "PEDESTRIAN",
+      "model_name": "EntrepreneurFemale",
+      "init_state": {
+        "position": {
+          "x": 247.95693889637897,
+          "y": 178.2195124657001
+        },
+        "heading": 0.0,
+        "velocity": {
+          "x": 0,
+          "y": 0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "single_destination_controller",
+        "parameters": {
+          "destination": {
+            "x": 232.31647517026522,
+            "y": 170.31208480648678
+          },
+          "speed": 1.5257430557930876,
+          "trigger_distance": 25.621787850366296
+        }
+      },
+      "config": {}
+    },
+    {
+      "id": "npc6",
+      "agent_type": "NPC",
+      "model_name": "Sedan",
+      "init_state": {
+        "position": {
+          "x": 242.426173455441,
+          "y": 143.2752176291126
+        },
+        "heading": 4.717548305056056,
+        "velocity": {
+          "x": 0.0,
+          "y": -0.0
+        },
+        "angular_velocity": 0,
+        "width": 0,
+        "length": 0
+      },
+      "controller": {
+        "controller_name": "lane_follow_controller",
+        "parameters": {
+          "max_speed": 0
+        }
+      },
+      "config": {}
+    }
+  ],
+  "static_items": [],
+  "traffic_lights_control": [],
+  "record_traffic_lights": [],
+  "duration": 120,
+  "time_step": 0.5,
+  "aut_id": "aut"
+}

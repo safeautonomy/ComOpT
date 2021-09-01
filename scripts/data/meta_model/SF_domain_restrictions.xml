@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<constraints>
+    <!-- In San Francisco, impossible to have round_about, Y-way intersection -->    
+    <constraint>
+        <upperbound>0</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.roundabout</item>
+        <item>1, road_structure.Y_way_intersection</item>
+    </constraint>
+
+
+    <!-- If there exists only one lane (shared for both directions) or two lanes (one for each direction), then the current lane can only be 1 -->
+    <!-- (total_lanes.2 | total_lanes.1) ==> current_lane.1 -->
+    <!-- !(total_lanes.2 | total_lanes.1) | current_lane.1 -->
+    <!-- "!(total_lanes.2 | total_lanes.1)" is equal to "total_lanes.4", so we can rewrite the constraint to a MILP form total_lanes.4 + current_lane.1 >= 1 -->    
+    <!-- <constraint>
+        <upperbound>MAX</upperbound>
+        <lowerbound>1</lowerbound>
+        <item>1, total_lanes.4</item>
+        <item>1, current_lane.1</item>
+    </constraint> -->
+
+    <constraint>
+        <upperbound>2</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.T_way_intersection</item>
+        <item>1, entrance_crosswalk.True</item>
+        <item>1, exit_crosswalk.True</item>
+    </constraint>
+
+    <!-- Restrict our motion pattern to disable u-turn, breaking -->   
+    <!-- The below constraint enforces all items to be no selected -->   
+    <constraint>
+        <upperbound>0</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, ego_vehicle_movement_pattern.break</item>
+        <item>1, ego_vehicle_movement_pattern.make_u_turn</item>
+    </constraint>
+
+
+    <!-- Restrict our motion pattern to disable cutting_left, cutting_right -->   
+    <!-- The below constraint enforces all items to be no selected -->   
+    <constraint>
+        <upperbound>0</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, ego_vehicle_movement_pattern.cut_left</item>
+        <item>1, ego_vehicle_movement_pattern.cut_right</item>
+    </constraint>
+
+
+    <!-- If there is one lane (shared for both directions) or two lanes (one for each direction), disable left cutting or right cutting   -->  
+
+    <!--  total_lanes.1 ==> ! ego_vehicle_movement_pattern.cut_left -->
+    <!--  ! total_lanes.1 | ! ego_vehicle_movement_pattern.cut_left -->
+    <!--  (1- total_lanes.1) + (1- ego_vehicle_movement_pattern.cut_left) > 0 -->
+    <!--  (1- total_lanes.1) + (1- ego_vehicle_movement_pattern.cut_left >= 1 -->
+    <!--  0 <= total_lanes.1 + ego_vehicle_movement_pattern.cut_left <= 1 -->
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, total_lanes.1 </item>
+        <item>1, ego_vehicle_movement_pattern.cut_left</item>
+    </constraint>
+
+
+    <!--  total_lanes.1 ==> ! ego_vehicle_movement_pattern.cut_right -->
+    <!--  0 <= total_lanes.1 + ego_vehicle_movement_pattern.cut_right <= 1 -->
+        <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, total_lanes.1 </item>
+        <item>1, ego_vehicle_movement_pattern.cut_right</item>
+    </constraint>
+
+    <!--  total_lanes.2 ==> ! ego_vehicle_movement_pattern.cut_right -->
+    <!--  0 <= total_lanes.2 + ego_vehicle_movement_pattern.cut_right <= 1 -->
+        <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, total_lanes.2 </item>
+        <item>1, ego_vehicle_movement_pattern.cut_left</item>
+    </constraint>
+
+    <!--  total_lanes.2 ==> ! ego_vehicle_movement_pattern.cut_right -->
+    <!--  0 <= total_lanes.2 + ego_vehicle_movement_pattern.cut_right <= 1 -->
+        <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, total_lanes.2 </item>
+        <item>1, ego_vehicle_movement_pattern.cut_right</item>
+    </constraint>
+
+
+    <!-- If the road shape is straight, one can't do left turn or right turn   -->  
+    <!--  road_structure.straight ==> ! ego_vehicle_movement_pattern.turn_left -->
+    <!--  0 <= road_structure.straight  + ego_vehicle_movement_pattern.turn_left <= 1 -->
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.straight_lane</item>
+        <item>1, ego_vehicle_movement_pattern.turn_left</item>
+    </constraint>
+
+
+    <!--  road_structure.straight ==> ! ego_vehicle_movement_pattern.turn_right -->
+    <!--  0 <= road_structure.straight  + ego_vehicle_movement_pattern.turn_right <= 1 -->
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.straight_lane</item>
+        <item>1, ego_vehicle_movement_pattern.turn_right</item>
+    </constraint>
+
+
+    <!-- If the road shape is Y-shaped or T-shaped, one can't go straight (only left waypoint and right waypoints are defined)  -->    
+    <!--  0 <= road_structure.Y_way_intersection  + ego_vehicle_movement_pattern.drive_straight <= 1 -->
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.Y_way_intersection</item>
+        <item>1, ego_vehicle_movement_pattern.drive_straight</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.T_way_intersection</item>
+        <item>1, ego_vehicle_movement_pattern.drive_straight</item>
+    </constraint>
+
+    <!-- Currently, the vehicle initial speed is always restricted to zero -->    
+    <!--
+    <constraint>
+        <upperbound>0</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, ego_vehicle_initial_speed.low </item>
+        <item>1, ego_vehicle_initial_speed.mid </item>
+        <item>1, ego_vehicle_initial_speed.high </item>
+    </constraint>
+    -->
+
+    <!-- Currently, a shared lane case is only known in GoMentum -->
+
+    <constraint>
+        <upperbound>0</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, total_lanes.1 </item>
+    </constraint>
+
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, density_of_crossing_pedestrians.clear</item>
+        <item>1, entrance_crosswalk.True</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>1</lowerbound>
+        <item>1, density_of_crossing_pedestrians.clear</item>
+        <item>1, exit_crosswalk.True</item>
+    </constraint>
+
+    <!-- <constraint>
+        <upperbound>0</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, has_traffic_light.True </item>
+    </constraint> -->
+
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>1</lowerbound>
+        <item>1, has_traffic_light.True</item>
+        <item>1, traffic_light_trigger_distance.none</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>1</upperbound>
+        <lowerbound>1</lowerbound>
+        <item>1, has_traffic_light.True</item>
+        <item>1, traffic_light_initial_color.none</item>
+    </constraint>
+
+    <!-- Unavailable combinatin in San Francisco generated by check_combination.py -->
+    <constraint>
+        <upperbound>2</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.T_way_intersection</item>
+        <item>1, exit_crosswalk.True</item>
+        <item>1, ego_vehicle_movement_pattern.turn_right</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>2</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.T_way_intersection</item>
+        <item>1, exit_crosswalk.True</item>
+        <item>1, ego_vehicle_movement_pattern.turn_left</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>3</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.4_way_intersection</item>
+        <item>1, entrance_crosswalk.True</item>
+        <item>1, exit_crosswalk.True</item>
+        <item>1, ego_vehicle_movement_pattern.turn_right</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>3</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.4_way_intersection</item>
+        <item>1, entrance_crosswalk.True</item>
+        <item>1, exit_crosswalk.True</item>
+        <item>1, ego_vehicle_movement_pattern.turn_left</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>MAX</upperbound>
+        <lowerbound>1</lowerbound>
+        <item>1, entrance_crosswalk.False</item>
+        <item>1, has_traffic_light.True</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>MAX</upperbound>
+        <lowerbound>1</lowerbound>
+        <item>1, has_traffic_light.True</item>
+        <item>1, exit_crosswalk.False</item>
+        <item>1, ego_vehicle_movement_pattern.drive_straight</item>
+    </constraint>
+
+    <constraint>
+        <upperbound>4</upperbound>
+        <lowerbound>0</lowerbound>
+        <item>1, road_structure.T_way_intersection</item>
+        <item>1, entrance_crosswalk.False</item>
+        <item>1, exit_crosswalk.False</item>
+        <item>1, has_traffic_light.False</item>
+        <item>1, ego_vehicle_movement_pattern.turn_right</item>
+    </constraint>
+
+</constraints>

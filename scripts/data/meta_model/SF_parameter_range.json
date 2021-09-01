@@ -1,0 +1,72 @@
+{
+    "weather": {
+        "cloudy": {
+            "cloudiness": [0.3001, 1.0],
+            "rain": [0.0, 0.1],
+            "wetness" : [0.0, 0.3],
+            "fog": [0.0, 0.3]
+        },
+        "rainy":  {
+            "cloudiness": [0.3001, 1.0], 
+            "fog": [0.3001, 1.0],
+            "rain": [0.5, 1.0],
+            "wetness" : [0.5, 1.0]
+        },
+		"sunny": {
+            "cloudiness": [0.0, 0.3], 
+            "fog": [0.0, 0.1],
+            "rain": [0.0, 0.0],
+            "wetness" : [0.0, 0.0]
+        }
+    },
+
+    "road_damage": {
+        "light": [0.0, 0.3],
+        "medium": [0.3001, 0.7],
+        "heavy": [0.7001, 1.0]
+    },
+
+    "road_structure": {
+        "straight_lane": "j_2ends_long_straight",
+        "4_way_intersection": "j_crossroads",
+        "T_way_intersection": "j_t_shaped",
+		"Y_way_intersection": "j_y_shaped",
+        "roundabout": "j_roundabout"
+    },
+
+    "density_of_vehicles": {
+        "dense": [7, 10],
+        "mild": [3, 6],
+	    "clear": [0, 2]
+    },
+
+    "density_of_crossing_pedestrians": {
+        "dense": [5, 10],
+        "mild": [1, 4],
+	    "clear": [0, 0]
+    },
+
+
+    "ego_vehicle_initial_speed": {
+        "stop": [0.0, 0.0],
+        "low": [0.0001, 5.0],
+        "mid": [5.0001, 10.0],
+	    "high": [10.0001, 15.0]
+    },
+
+    "npc_vehicle_info": {
+        "speed": [5.0, 15.0]
+    },
+
+    "npc_pedestrian_info": {
+        "speed": [1.0, 3.0], 
+        "trigger_distance": [10.0, 40.0]
+    },
+
+    "traffic_light_trigger_distance": {
+        "close": [5.0, 15.0],
+        "medium": [15.001, 30.0],
+        "far": [30.001, 50.0]
+    }
+
+}
