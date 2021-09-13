@@ -26,6 +26,8 @@ ComOpT has been tested with the following software configuration:
 * LGSVL PythonAPI version - 2021.01
 * Python >= 3.8
 
+To run Apollo (master version taken on 20210414) with SVL Simulator, please follow the instructions detailed [here](https://www.svlsimulator.com/docs/system-under-test/apollo-master-instructions/).
+
 
 # Installing additional software
 
