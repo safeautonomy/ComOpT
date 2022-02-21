@@ -28,7 +28,7 @@ import json, os, sys
 
 from comopt import scenario
 from comopt.scenario import ScenarioDescription
-from loguru import RecordProcess, logger
+from loguru import logger
 
 import argparse
 
